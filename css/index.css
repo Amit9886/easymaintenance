@@ -1,0 +1,47 @@
+#header {
+    width: 99.7%;
+    height: 150px;
+    background-image: url('/images/apartment.jpg');
+    background-size: 100% 100%;
+    background-color: #675c47;
+    margin: 2px;
+  }
+
+  body {
+    background-color: #e1f5f4;
+    font-family: Georgia, “Times New Roman”, Times, serif;
+    font-size: small;
+    margin: 10px;
+    }
+    
+    #main {
+    /* font-size: 105%; */
+    /* padding: 15px; */
+    /* margin: 80px 10px 380px 10px; */
+    }
+    
+    #footer {
+    background-color: #675c47;
+    color: #efe5d0;
+    text-align: center;
+    padding: 10px;
+    margin-top: 350px;
+    font-size: 90%;
+    }
+
+    #loginDiv {
+        position: absolute;
+        right: 25px;
+    }
+    
+    th {
+       text-align: right;
+    }
+
+    #submitBtn {
+        background-color: rgb(187, 208, 247);
+    }
+   
+    #btnColor {
+        color: blue;
+    }
