@@ -6,7 +6,8 @@
   <style>
     body {
       font-family: "Lato", sans-serif;
-      background-color: rgba(230, 139, 187, 0.075);|
+      background-color: rgba(230, 139, 187, 0.075);
+      |
     }
 
     .sidenav {
@@ -39,6 +40,7 @@
       /* font-size: 28px; */
       /* Increased text to enable scrolling */
       padding: 0px 10px;
+      height: 100%;
       
     }
 
@@ -74,7 +76,7 @@
     }
 
     #yearslabel {
-      margin-left: 1em;
+      margin-left: 13em;
     }
 
     * {
@@ -88,7 +90,7 @@
 
     .column {
       float: left;
-      width: 50%;
+      width: 100%;
       padding: 5px;
     }
 
@@ -100,22 +102,24 @@
     }
 
     #main {
-      margin-right : 20%;
+      margin-right: 20%;
       border-radius: 0.2em;
     }
 
-    table, th, td {
+    table {
       /* border-collapse: collapse; */
       border-spacing: 0;
-      width: 80%;
-      border: 1.5px solid rgb(214, 21, 21);
-      
+      width: 100%;
+      border: 0.5px solid rgb(138, 119, 119);
     }
 
     th,
     td {
       text-align: left;
       padding: 10px;
+      border-spacing: 0;
+      width: 50%;
+      border: 0.5px solid rgb(138, 119, 119);
     }
 
     tr {
@@ -123,13 +127,26 @@
     }
 
     #addapartmenttable {
-      border: 0;
+      /* border: 0; */
+      border: 0.5px solid rgb(138, 119, 119);
+      width: 100%;
     }
+
     #addapartmenttable th {
-      border: 0;
+      /* border: 0; */
+      border: 0.5px solid rgb(138, 119, 119);
     }
+
     #addapartmenttable td {
-      border: 0;
+      /* border: 0; */
+      padding-left: 10%;
+      border: 0.5px solid rgb(138, 119, 119);
+    }
+
+    #addapartmenttablelable {
+      text-align: center;
+      font-size: 100%;
+      margin-top: 0px;
     }
   </style>
 </head>
@@ -146,7 +163,7 @@
       <tr>
         <td>
           <div id="time">
-            <label for="cars">Select month</label>
+            <label for="cars">Select month:</label>
             <select name="months" id="months">
               <option value="Jan">January</option>
               <option value="Feb">February</option>
@@ -161,11 +178,7 @@
               <option value="Nov">November</option>
               <option value="Dec">December</option>
             </select>
-          </div>
-        </td>
-        <td>
-          <div id="time">
-            <label for="cars" id="yearslabel">Select year</label>
+            <label for="cars" id="yearslabel">Select year:</label>
             <select name="years" id="years">
               <option value="2010">2010</option>
               <option value="2011">2011</option>
@@ -180,6 +193,9 @@
               <option value="2020">2020</option>
             </select>
           </div>
+        </td>
+        <td>
+
         </td>
       </tr>
       <tr>
@@ -205,8 +221,13 @@
           </div>
         </td>
         <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
           <div class="column">
-            <h5>Add Detail</h5>
+            <h5 id="addapartmenttablelable">Add Detail</h5>
             <table id="apartmentDetail">
               <tr>
                 <thead>
@@ -234,120 +255,10 @@
             <button name="addApartmentDetailBtn">Add Row</button>
           </div>
         </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="column">
-            <!-- <h3 id="OR">OR</h3> -->
-            <h5>Add Detail</h5>
-            <table id="apartmentDetail">
-              <tr>
-                <thead>
-                  <th>Sr No.</th>
-                  <th>Flat Number</th>
-                  <th>Flat Area in Sqft</th>
-                  <th>Registered Email ID</th>
-                </thead>
-              </tr>
-              <tr>
-                <td>
-                  <input type="text" name="srNo" required>
-                </td>
-                <td>
-                  <input type="text" name="flatNum" required>
-                </td>
-                <td>
-                  <input type="text" name="flatArea" required>
-                </td>
-                <td>
-                  <input type="text" name="emailId" required>
-                </td>
-              </tr>
-            </table>
-            <button name="addApartmentDetailBtn">Add Row</button>
-          </div>
-        </td>
         <td></td>
       </tr>
     </table>
   </div>
-  <!-- <div class="row">
-    <div class="column">
-      <h5 id="addapartmenttablelable">Add Apartment Details</h5>
-      <table id="addapartmenttable">
-        <tr>
-          <th>Total Unit:</th>
-          <td>
-            <input type="text" name="totalUnit" required>
-          </td>
-        </tr>
-        <tr>
-          <th>Upload Apartment Detail:</th>
-          <td>
-            <input type="file">
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="column">
-      <h5>Add Detail</h5>
-      <table id="apartmentDetail">
-        <tr>
-          <thead>
-            <th>Sr No.</th>
-            <th>Expense Type</th>
-            <th>Amount</th>
-            <th>Distribution</th>
-          </thead>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" name="srNo" required>
-          </td>
-          <td>
-            <input type="text" name="flatNum" required>
-          </td>
-          <td>
-            <input type="text" name="flatArea" required>
-          </td>
-          <td>
-            <input type="text" name="emailId" required>
-          </td>
-        </tr>
-      </table>
-      <button name="addApartmentDetailBtn">Add Row</button>
-    </div> -->
-    <!-- <div class="column">
-      <h3 id="OR">OR</h3>
-      <h5>Add Detail</h5>
-      <table id="apartmentDetail">
-        <tr>
-          <thead>
-            <th>Sr No.</th>
-            <th>Flat Number</th>
-            <th>Flat Area in Sqft</th>
-            <th>Registered Email ID</th>
-          </thead>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" name="srNo" required>
-          </td>
-          <td>
-            <input type="text" name="flatNum" required>
-          </td>
-          <td>
-            <input type="text" name="flatArea" required>
-          </td>
-          <td>
-            <input type="text" name="emailId" required>
-          </td>
-        </tr>
-      </table>
-      <button name="addApartmentDetailBtn">Add Row</button>
-    </div> -->
   </div>
 </body>
-
 </html>
