@@ -75,7 +75,12 @@
     }
 
     #yearslabel {
-      margin-left: 13em;
+      margin-left: 7em;
+      font-weight: bold;
+    }
+
+    #monthslabel {
+      font-weight: bold;
     }
 
     * {
@@ -83,8 +88,7 @@
     }
 
     .row {
-      margin-left: 1em;
-      /* margin-right: -5px; */
+      margin-left: 0.5em;
     }
 
     .column {
@@ -116,9 +120,8 @@
     th,
     td {
       text-align: left;
-      padding: 5px;
+      padding: 1px;
       border-spacing: 0;
-      /* width: 20%; */
       border: 0.5px solid rgb(138, 119, 119);
     }
 
@@ -128,19 +131,16 @@
 
     #addapartmenttable {
       border: 0;
-      /* border: 0.5px solid rgb(138, 119, 119); */
       width: 40%;
     }
 
     #addapartmenttable th {
       border: 0;
-      /* border: 0.5px solid rgb(138, 119, 119); */
     }
 
     #addapartmenttable td {
       border: 0;
-      padding-left: 10%;
-      /* border: 0.5px solid rgb(138, 119, 119); */
+      padding-left: 2%;
     }
 
     #addapartmenttablelable {
@@ -149,9 +149,9 @@
       margin-top: 0px;
     }
 
-    /* #apartmentDetail {
-      height: 40%;
-    } */
+    #distTypeHeader th {
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -167,7 +167,7 @@
       <tr>
         <td>
           <div id="time">
-            <label for="cars">Select month:</label>
+            <label for="cars" id="monthslabel">Select month:</label>
             <select name="months" id="months">
               <option value="Jan">January</option>
               <option value="Feb">February</option>
@@ -228,7 +228,7 @@
             <h5 id="addapartmenttablelable">Add Detail</h5>
             <table id="apartmentDetail">
               <tr>
-                <thead>
+                <thead id="distTypeHeader">
                   <th>Sr No.</th>
                   <th>Expense Type</th>
                   <th>Distribution</th>
@@ -242,9 +242,9 @@
                   <p>Security</p>
                 </td>
                 <td>
-                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <input type="radio" id="distribution1" name="securityDistribution" value="equal">
                   <label for="distribution1">Equal</label>
-                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <input type="radio" id="distribution2" name="securityDistribution" value="flatArea">
                   <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
@@ -256,9 +256,9 @@
                   <p>Water</p>
                 </td>
                 <td>
-                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <input type="radio" id="distribution1" name="waterDistribution" value="equal">
                   <label for="distribution1">Equal</label>
-                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <input type="radio" id="distribution2" name="waterDistribution" value="flatArea">
                   <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
@@ -270,9 +270,9 @@
                   <p>Electricity</p>
                 </td>
                 <td>
-                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <input type="radio" id="distribution1" name="electricityDistribution" value="equal">
                   <label for="distribution1">Equal</label>
-                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <input type="radio" id="distribution2" name="electricityDistribution" value="flatArea">
                   <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
@@ -284,9 +284,9 @@
                   <p>Petty Cash</p>
                 </td>
                 <td>
-                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <input type="radio" id="distribution1" name="pettyCashDistribution" value="equal">
                   <label for="distribution1">Equal</label>
-                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <input type="radio" id="distribution2" name="pettyCashDistribution" value="flatArea">
                   <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
@@ -298,9 +298,9 @@
                   <p>Generator</p>
                 </td>
                 <td>
-                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <input type="radio" id="distribution1" name="generatorDistribution" value="equal">
                   <label for="distribution1">Equal</label>
-                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <input type="radio" id="distribution2" name="generatorDistribution" value="flatArea">
                   <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
@@ -312,9 +312,9 @@
                   <p>Plumbing</p>
                 </td>
                 <td>
-                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <input type="radio" id="distribution1" name="plumbingDistribution" value="equal">
                   <label for="distribution1">Equal</label>
-                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <input type="radio" id="distribution2" name="plumbingDistribution" value="flatArea">
                   <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
