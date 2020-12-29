@@ -40,11 +40,10 @@
       /* font-size: 28px; */
       /* Increased text to enable scrolling */
       padding: 0px 10px;
-      height: 100%;
       
     }
 
-    @media screen and (max-height: 450px) {
+    @media screen and (max-height: 250px) {
       .sidenav {
         padding-top: 15px;
       }
@@ -111,14 +110,15 @@
       border-spacing: 0;
       width: 100%;
       border: 0.5px solid rgb(138, 119, 119);
+      height: 200px;
     }
 
     th,
     td {
       text-align: left;
-      padding: 10px;
+      padding: 5px;
       border-spacing: 0;
-      width: 50%;
+      /* width: 20%; */
       border: 0.5px solid rgb(138, 119, 119);
     }
 
@@ -127,26 +127,29 @@
     }
 
     #addapartmenttable {
-      /* border: 0; */
-      border: 0.5px solid rgb(138, 119, 119);
-      width: 100%;
+      border: 0;
+      /* border: 0.5px solid rgb(138, 119, 119); */
+      width: 40%;
     }
 
     #addapartmenttable th {
-      /* border: 0; */
-      border: 0.5px solid rgb(138, 119, 119);
+      border: 0;
+      /* border: 0.5px solid rgb(138, 119, 119); */
     }
 
     #addapartmenttable td {
-      /* border: 0; */
+      border: 0;
       padding-left: 10%;
-      border: 0.5px solid rgb(138, 119, 119);
+      /* border: 0.5px solid rgb(138, 119, 119); */
     }
 
     #addapartmenttablelable {
       text-align: center;
       font-size: 100%;
       margin-top: 0px;
+    }
+    #apartmentDetail {
+      height: 50%;
     }
   </style>
 </head>
@@ -194,11 +197,8 @@
             </select>
           </div>
         </td>
-        <td>
-
-        </td>
       </tr>
-      <tr>
+      <tr id="apartmentDetail">
         <td>
           <div class="row">
             <div class="column">
@@ -219,9 +219,6 @@
               </table>
             </div>
           </div>
-        </td>
-        <td>
-          
         </td>
       </tr>
       <tr>
@@ -251,11 +248,80 @@
                   <input type="text" name="emailId" required>
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <input type="text" name="srNo" required>
+                </td>
+                <td>
+                  <input type="text" name="flatNum" required>
+                </td>
+                <td>
+                  <input type="text" name="flatArea" required>
+                </td>
+                <td>
+                  <input type="text" name="emailId" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="srNo" required>
+                </td>
+                <td>
+                  <input type="text" name="flatNum" required>
+                </td>
+                <td>
+                  <input type="text" name="flatArea" required>
+                </td>
+                <td>
+                  <input type="text" name="emailId" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="srNo" required>
+                </td>
+                <td>
+                  <input type="text" name="flatNum" required>
+                </td>
+                <td>
+                  <input type="text" name="flatArea" required>
+                </td>
+                <td>
+                  <input type="text" name="emailId" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="srNo" required>
+                </td>
+                <td>
+                  <input type="text" name="flatNum" required>
+                </td>
+                <td>
+                  <input type="text" name="flatArea" required>
+                </td>
+                <td>
+                  <input type="text" name="emailId" required>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="srNo" required>
+                </td>
+                <td>
+                  <input type="text" name="flatNum" required>
+                </td>
+                <td>
+                  <input type="text" name="flatArea" required>
+                </td>
+                <td>
+                  <input type="text" name="emailId" required>
+                </td>
+              </tr>
             </table>
             <button name="addApartmentDetailBtn">Add Row</button>
           </div>
         </td>
-        <td></td>
       </tr>
     </table>
   </div>
