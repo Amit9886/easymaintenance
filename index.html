@@ -40,7 +40,7 @@
       /* font-size: 28px; */
       /* Increased text to enable scrolling */
       padding: 0px 10px;
-      
+
     }
 
     @media screen and (max-height: 250px) {
@@ -148,9 +148,10 @@
       font-size: 100%;
       margin-top: 0px;
     }
-    #apartmentDetail {
-      height: 50%;
-    }
+
+    /* #apartmentDetail {
+      height: 40%;
+    } */
   </style>
 </head>
 
@@ -230,96 +231,94 @@
                 <thead>
                   <th>Sr No.</th>
                   <th>Expense Type</th>
-                  <th>Amount</th>
                   <th>Distribution</th>
                 </thead>
               </tr>
               <tr>
                 <td>
-                  <input type="text" name="srNo" required>
+                  <p>1</p>
                 </td>
                 <td>
-                  <input type="text" name="flatNum" required>
+                  <p>Security</p>
                 </td>
                 <td>
-                  <input type="text" name="flatArea" required>
-                </td>
-                <td>
-                  <input type="text" name="emailId" required>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="text" name="srNo" required>
-                </td>
-                <td>
-                  <input type="text" name="flatNum" required>
-                </td>
-                <td>
-                  <input type="text" name="flatArea" required>
-                </td>
-                <td>
-                  <input type="text" name="emailId" required>
+                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <label for="distribution1">Equal</label>
+                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <input type="text" name="srNo" required>
+                  <p>2</p>
                 </td>
                 <td>
-                  <input type="text" name="flatNum" required>
+                  <p>Water</p>
                 </td>
                 <td>
-                  <input type="text" name="flatArea" required>
-                </td>
-                <td>
-                  <input type="text" name="emailId" required>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="text" name="srNo" required>
-                </td>
-                <td>
-                  <input type="text" name="flatNum" required>
-                </td>
-                <td>
-                  <input type="text" name="flatArea" required>
-                </td>
-                <td>
-                  <input type="text" name="emailId" required>
+                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <label for="distribution1">Equal</label>
+                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <input type="text" name="srNo" required>
+                  <p>3</p>
                 </td>
                 <td>
-                  <input type="text" name="flatNum" required>
+                  <p>Electricity</p>
                 </td>
                 <td>
-                  <input type="text" name="flatArea" required>
-                </td>
-                <td>
-                  <input type="text" name="emailId" required>
+                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <label for="distribution1">Equal</label>
+                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <input type="text" name="srNo" required>
+                  <p>4</p>
                 </td>
                 <td>
-                  <input type="text" name="flatNum" required>
+                  <p>Petty Cash</p>
                 </td>
                 <td>
-                  <input type="text" name="flatArea" required>
+                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <label for="distribution1">Equal</label>
+                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <label for="distribution2">Flat Area</label><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>5</p>
                 </td>
                 <td>
-                  <input type="text" name="emailId" required>
+                  <p>Generator</p>
+                </td>
+                <td>
+                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <label for="distribution1">Equal</label>
+                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <label for="distribution2">Flat Area</label><br>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>6</p>
+                </td>
+                <td>
+                  <p>Plumbing</p>
+                </td>
+                <td>
+                  <input type="radio" id="distribution1" name="distribution" value="equal">
+                  <label for="distribution1">Equal</label>
+                  <input type="radio" id="distribution2" name="distribution" value="flatArea">
+                  <label for="distribution2">Flat Area</label><br>
                 </td>
               </tr>
             </table>
-            <button name="addApartmentDetailBtn">Add Row</button>
           </div>
         </td>
       </tr>
@@ -327,4 +326,5 @@
   </div>
   </div>
 </body>
+
 </html>
