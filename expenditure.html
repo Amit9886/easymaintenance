@@ -1,0 +1,63 @@
+<h2>Easy Maintenance</h2>
+  <div class="main">
+    <table id="main">
+      <tr id="apartmentDetail">
+        <td>
+          <div class="row">
+            <div class="column">
+              <table id="addapartmenttable">
+                <tr>
+                  <th>Upload Maintenance Detail:</th>
+                  <td>
+                    <label for="fileSelector" class="custom-file-upload">
+                      Browse
+                    </label>
+                    <input type="file" demo-file-model="myFile"  id ="fileSelector"/>
+                    
+                  </td>
+                  <td>
+                    <a class="custom-file-upload" ng-click="uploadFile()">Upload</a>
+                  </td>
+                  <td ng-model="calculationResponse">
+                    <a id="submitBtn"  ng-href="/generateReport">Generate Report</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr ng-model="expenditureList" ng-if="expenditureList.length > 0">
+        <td>
+          <div class="column">
+            <h5 id="addapartmenttablelable">Expense Details from sheet</h5>
+            <table id="apartmentDetail">
+              <tr>
+                <thead id="distTypeHeader">
+                  <th>Sr No.</th>
+                  <th>Expense Type</th>
+                  <th>Amount</th>
+                  <th>Distribution</th>
+                </thead>
+              </tr>
+              <tr ng-repeat="expenditure in expenditureList">
+                <td>
+                  <p>1</p>
+                </td>
+                <td>
+                  <p>{{expenditure.expenseType}}</p>
+                </td>
+                <td>
+                  <p>{{expenditure.amount}}</p>
+                </td>
+                <td>
+                  <p>{{expenditure.divisionType}}</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  </div>

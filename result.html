@@ -1,310 +1,57 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: "Lato", sans-serif;
-      background-color: rgba(230, 139, 187, 0.075);
-      |
-    }
-
-    .sidenav {
-      height: 100%;
-      width: 160px;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: rgb(161, 62, 131);
-      overflow-x: hidden;
-      padding-top: 20px;
-    }
-
-    .sidenav a {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 21px;
-      color: #f7e9e9;
-      display: block;
-    }
-
-    .sidenav a:hover {
-      color: #f1f1f1;
-    }
-
-    .main {
-      margin-left: 160px;
-      /* Same as the width of the sidenav */
-      /* font-size: 28px; */
-      /* Increased text to enable scrolling */
-      padding: 15px;
-
-    }
-
-    @media screen and (max-height: 250px) {
-      .sidenav {
-        padding-top: 15px;
-      }
-
-      .sidenav a {
-        font-size: 18px;
-      }
-    }
-
-
-    h2 {
-      text-align: center;
-    }
-
-    #time {
-      border: 10px;
-      padding: 8px;
-    }
-
-    #months {
-      margin-left: 1em;
-      border-radius: 0.3em;
-      width: 10em;
-    }
-
-    #years {
-      margin-left: 0.5em;
-      border-radius: 0.3em;
-      width: 6em;
-    }
-
-    #yearslabel {
-      margin-left: 7em;
-      font-weight: bold;
-    }
-
-    #monthslabel {
-      font-weight: bold;
-    }
-
-    * {
-      box-sizing: border-box;
-      border-radius: 0.3em;
-    }
-
-    .row {
-      margin-left: 0.5em;
-    }
-
-    .column {
-      float: left;
-      width: 110%;
-      padding: 5px;
-    }
-
-    /* Clearfix (clear floats) */
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    #main {
-      border-radius: 0.2em;
-    }
-
-    table {
-      border-spacing: 0;
-      width: 85%;
-      border: 0.5px solid rgb(138, 119, 119);
-      height: 120px;
-    }
-
-    th,
-    td {
-      text-align: left;
-      padding-left: 27px;
-      border-spacing: 0;
-      border: 0.5px solid rgb(138, 119, 119);
-    }
-
-    tr {
-      background-color: #f2f2f2;
-    }
-
-    input {
-      border-radius: 0.2em;
-    }
-
-    #addapartmenttable {
-      border: 0;
-      width: 40%;
-    }
-
-    #addapartmenttable th {
-      border: 0;
-    }
-
-    #addapartmenttable td {
-      border: 0;
-      padding-left: 12%;
-    }
-
-    #addapartmenttablelable {
-      text-align: center;
-      font-size: 100%;
-      margin-top: 0px;
-    }
-
-    #distTypeHeader th {
-      text-align: center;
-      padding: 8px;
-      width: 5px;
-    }
-
-    #submitBtn {
-      margin-top: 1%;
-      margin-left: 70em;
-      background-color: rgb(190, 193, 197);
-      font-weight: bold;
-      color: rgb(9, 9, 83);
-      border-radius: 0.5em;
-      border: none;
-      padding: 5px 20px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      display: inline-block;
-      box-sizing: border-box;
-      text-decoration: none;
-      font-family: 'Roboto', sans-serif;
-      color: #FFFFFF;
-      background-color: #1c7a39;
-      box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
-      text-align: center;
-      position: relative;
-      cursor: pointer;
-      font-size: medium;
-    }
-
-    #submitBtn:hover {
-      transform: scale(1.1);
-    }
-
-    input[type="file"] {
-      display: none;
-    }
-
-    .custom-file-upload {
-      border: 1px solid rgb(170, 116, 116);
-      display: inline-block;
-      padding: 6px 12px;
-      cursor: pointer;
-      background-color: rgb(123, 138, 12);
-      color: white;
-      border-radius: 0.4em;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="sidenav">
-    <a href="about.html">About</a>
-    <a href="index.html">Generate Report</a>
-  </div>
-  <h2>Easy Maintenance</h2>
-  <a id="submitBtn" href="result.html">Download Report</a>
-  <a id="submitBtn" href="index.html">Back</a>
-  <div class="main">
-    <table id="main">
-      <tr>
-        <td>
-          <div class="column">
-            <h5 id="addapartmenttablelable">Final Report</h5>
-            <table id="apartmentDetail">
-              <tr>
-                <thead id="distTypeHeader">
-                  <th>Flat No.</th>
-                  <th>Square Foot</th>
-                  <th>Shared</th>
-                  <th>Sq.Ft wise</th>
-                  <th>Total maintenance</th>
-                </thead>
-              </tr>
-              <tr>
-                <td>
-                  <p>1</p>
-                </td>
-                <td>
-                  <p>1000</p>
-                </td>
-                <td>
-                    <p>20000</p>
-                </td>
-                <td>
-                    <p>11363</p>
-                </td>
-                <td>
-                    <p>31363</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>2</p>
-                </td>
-                <td>
-                  <p>1100</p>
-                </td>
-                <td>
-                    <p>20000</p>
-                </td>
-                <td>
-                    <p>12500</p>
-                </td>
-                <td>
-                    <p>32500</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>3</p>
-                </td>
-                <td>
-                  <p>1200</p>
-                </td>
-                <td>
-                    <p>20000</p>
-                </td>
-                <td>
-                    <p>12636</p>
-                </td>
-                <td>
-                    <p>33636</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>4</p>
-                </td>
-                <td>
-                  <p>1100</p>
-                </td>
-                <td>
-                    <p>20000</p>
-                </td>
-                <td>
-                    <p>12500</p>
-                </td>
-                <td>
-                    <p>32500</p>
-                </td>
-              </tr>
-              
-            </table>
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
-  
-  </div>
-
-</body>
-
-</html>
+<h2>Easy Maintenance</h2>
+<a id="submitBtn" ng-model="maintenanceReportFileLink" href='{{downloadFileLink}}'>Download Report</a>
+<a id="submitBtn" href="/upload">Back</a>
+<div class="main">
+  <table id="main">
+    <tr>
+      <td>
+        <div class="column" ng-if="calculationResponse.finalCalculationList != null && calculationResponse.finalCalculationList != '' && calculationResponse.finalCalculationList != undefined">
+          <h5 id="addapartmenttablelable">Final Report</h5>
+          <table id="distributionTable">
+            <tr>
+              <td class="head1">Shared Maintenance</td>
+              <td class="value1">{{calculationResponse.sharedMaintenance}}</td>
+            </tr>
+            <tr>
+              <td class="head1">Sq Ft Wise Maintenance</td>
+              <td class="value1">{{calculationResponse.sqFootMaintenance}}</td>
+            </tr>
+            <tr>
+              <td class="head1">Total Maintenance</td>
+              <td class="value1">{{calculationResponse.totalMaintenace}}</td>
+            </tr>
+          </table>
+          <table id="apartmentDetail">
+            <tr>
+              <thead id="distTypeHeader">
+                <th>Flat No.</th>
+                <th>Square Foot</th>
+                <th>Shared</th>
+                <th>Sq.Ft wise</th>
+                <th>Total maintenance</th>
+              </thead>
+            </tr>
+            <tr ng-repeat="calculation in calculationResponse.finalCalculationList">
+              <td>
+                <p>{{calculation.flatNum}}</p>
+              </td>
+              <td>
+                <p>{{calculation.flatArea}}</p>
+              </td>
+              <td>
+                <p>{{calculation.sharedDistribution}}</p>
+              </td>
+              <td>
+                <p>{{calculation.sqFootWiseDistribution}}</p>
+              </td>
+              <td>
+                <p>{{calculation.totalMaintenacePerFlat}}</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
