@@ -6,7 +6,9 @@ var loginController = app.controller('auditController', function ($scope, $http,
     $scope.uploadFile = function () {
         $scope.expenditureList = [];
         var file = $scope.myFile;
-        var uploadUrl = "http://34.69.67.123:8301/maintenance";
+        // var uploadUrl = "http://34.69.67.123:8301/maintenance";
+        // var uploadUrl = "https://localhost:8443/maintenance";
+        var uploadUrl = "https://8301-a7a3f92c-d01e-479a-a4c8-6e20bfba7405.asia-southeast1.cloudshell.dev/maintenance";
         var promise = fileUploadService.uploadFileToUrl(file, uploadUrl);
         promise.then(function (response) {
             let calculationResponse = response.calculationResponse;
@@ -24,7 +26,9 @@ var loginController = app.controller('auditController', function ($scope, $http,
 
     if ($location.url() == "/generateReport") {
         $scope.downloadFileLink = "";
-        var uploadUrl = "http://34.69.67.123:8301/report";
+        // var uploadUrl = "http://34.69.67.123:8301/report";
+        // var uploadUrl = "https://localhost:8443/report";
+        var uploadUrl = "https://8301-a7a3f92c-d01e-479a-a4c8-6e20bfba7405.asia-southeast1.cloudshell.dev/report";
         let calculationResponse = DataTransferService.get();
         DataTransferService.set(null);
         var promise = ServiceProcessor.invoke('POST', uploadUrl, calculationResponse);
@@ -40,7 +44,9 @@ var loginController = app.controller('auditController', function ($scope, $http,
 
     if ($location.url() == "/downloadReport") {
         let fileName = "maintenance-report.xlsx";
-        var uploadUrl = "http://34.69.67.123:8301/" + fileName;
+        // var uploadUrl = "http://34.69.67.123:8301/" + fileName;
+        // var uploadUrl = "https://ocalhost:8443/" + fileName;
+        var uploadUrl = "https://8301-a7a3f92c-d01e-479a-a4c8-6e20bfba7405.asia-southeast1.cloudshell.dev/" + fileName;
         let calculationResponse = DownloadTransferService.get();
         DownloadTransferService.set(null);
         var promise = ServiceProcessor.invoke('POST', uploadUrl, calculationResponse);
